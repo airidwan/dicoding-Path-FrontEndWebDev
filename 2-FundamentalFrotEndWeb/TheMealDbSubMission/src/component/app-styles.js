@@ -1,8 +1,9 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css,unsafeCSS } from 'lit-element';
+
 
 export const sharedStyles = css`
         .table-area {
-            background-image: url('../src/img/banner-bg.jpg');
+            background-image: url('./img/banner-bg.jpg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -13,7 +14,7 @@ export const sharedStyles = css`
         .masthead {
             height: 25vh;
             min-height: 100px;
-            background-image: url('../src/img/banner-bg.jpg');
+            background-image: url('./img/banner-bg.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;

@@ -49,11 +49,6 @@ class AppListCategories extends LitElement {
 
   updated(changedProperties) {
     super.updated(changedProperties);
-    // console.log(`updated!---> ${changedProperties}`);
-    // console.log(changedProperties);
-    // changedProperties.forEach((oldValue, propName) => {
-    //   console.log(`${propName} changed. oldValue: ${oldValue}`);
-    // });
     if (this.showCategories) {
       this.mealCategories.map(data => {
         let button = this.shadowRoot.getElementById(`searchBtn_${data.idCategory}`);

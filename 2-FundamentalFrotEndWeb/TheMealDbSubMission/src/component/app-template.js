@@ -1,6 +1,6 @@
-// import { html } from 'lit-html';
-import {html } from 'lit-element';
-import { until } from 'lit-html/directives/until';
+import { html } from 'lit-html';
+// import {html} from 'lit-element';
+import {until} from 'lit-html/directives/until';
 
 export const childCategoriesTemplate = (data) => html`
     
@@ -64,3 +64,16 @@ export const appSearchBar = (inputSearchValue, inputChanged, onSubmitHanlder) =>
         </div>
 </header>
 `;
+
+
+ const childCategoriesTemplate2 = (data) => html `
+    
+                <div class="col-lg-3 mb-3">
+                  <div class="card text-center">
+                      <img class="card-img-top" src="${data.strMealThumb}" alt="Card image" style="width:100%">
+                      <div class="card-title">
+                          <p>${data.strMeal}</p>
+                      </div>
+                  </div>
+                </div>
+              `;

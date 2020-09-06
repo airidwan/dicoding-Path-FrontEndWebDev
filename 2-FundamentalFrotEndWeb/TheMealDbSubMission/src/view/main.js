@@ -67,7 +67,7 @@ class MainView extends LitElement {
                 <div>
                     <nav id="transparent-navbar-guestnav" class="navbar navbar-expand-lg navbar-dark fixed-top">
                         <div clas="log-area">
-                            <img src="../src/img/logo-1.png" alt="logo" />
+                            <img src="./img/logo-1.png" alt="logo" />
                         </div>
                         <button aria-controls="responsive-navbar-nav" type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button>
                         <div class="navbar-collapse collapse" id="responsive-navbar-nav">

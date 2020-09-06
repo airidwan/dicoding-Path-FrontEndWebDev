@@ -5,6 +5,7 @@ import { type } from 'jquery';
 import { bootstrapStyles } from "@granite-elements/granite-lit-bootstrap/granite-lit-bootstrap.js";
 import DataSource from "../data/data-source.js";
 import { appSearchBar, mealListByNameTemplate, mealListByNameTemplates } from "./app-template";
+import { isUndefined } from "lodash";
 
 class AppContentExplorer extends LitElement {
   static get styles() {
@@ -46,11 +47,12 @@ class AppContentExplorer extends LitElement {
 
   async firstUpdated() {
     await new Promise((r) => setTimeout(r, 0));
-    // const resultGEt = await DataSource.GetMealItemRandom();
     let RamdommealFilterCategories = [];
     for (let i = 0; i < 4; i++) {
       let getRandom = await DataSource.GetMealItemRandom();
-      RamdommealFilterCategories.push(getRandom[0]);
+      if (!isUndefined(getRandom)){
+        RamdommealFilterCategories.push(getRandom[0]);
+      }
     }
     this.mealFilterCategories = RamdommealFilterCategories;
     console.log(this.mealFilterCategories);
